@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar Apps
+          Quasar App
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -48,8 +48,7 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
-import { useQuasar } from 'quasar'
- const $q = useQuasar()
+
 const linksData = [
   {
     title: 'Docs',
@@ -100,7 +99,6 @@ export default {
   components: { EssentialLink },
   data () {
     return {
-      $q,
       leftDrawerOpen: false,
       essentialLinks: linksData
     }
