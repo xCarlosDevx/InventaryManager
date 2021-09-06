@@ -34,6 +34,7 @@
             </q-item>
 
             <q-item clickable v-ripple>
+              
               <q-item-section avatar>
                 <q-icon name="send" />
               </q-item-section>

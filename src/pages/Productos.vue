@@ -1,35 +1,41 @@
 <template>
   <div class="q-pa-md">
-    <div class="q-gutter-md" style="max-width: 300px">
-      <q-uploader
-        url="http://localhost:4444/upload"
-        label="Upload files"
-        flat
-        bordered
-        accept=".jpg, image/*"
-        @rejected="onRejected"
-        style="max-width: 300px"
-      />
-      <q-uploader
-        style="max-width: 300px"
-        url="http://localhost:4444/upload"
-        label="Imagen del producto"
-        accept=".jpg, image/*"
-        @rejected="onRejected"
-      />
-      <q-input v-model="text" label="Standard" />
+    <div class="row q-col-gutter-none">
+      <div class="col-6 q-gutter-sm" >
+      <div class="q-gutter-sm justify-end"  style="max-width: 350px">
+        <h3 class="text-capitalize">agregar productos</h3>
+        <q-input outlined v-model="text" label="Descripcion" />
 
-      <q-input filled v-model="text" label="Filled" />
-      <q-input v-model="text" label="Standard" />
+        <q-input filled v-model="text" label="Precio/C" />
 
-      <q-input filled v-model="text" label="Filled" />
-      <q-input v-model="text" label="Standard" />
+        <q-input outlined v-model="text" label="Precio/V" />
 
-      <q-input filled v-model="text" label="Filled" />
+        <q-input filled v-model="text" label="Categoria" />
 
-      <q-btn push color="primary" label="Push" />
-      <q-btn push color="primary" label="Push" />
+        <q-input outlined v-model="text" label="Cantidad" />
+
+        <q-input filled v-model="text" label="Distribuidor" />
+
+        <q-btn push color="primary" label="Vaciar" />
+
+        <q-btn push color="primary" label="Enviar" />
+        </div>
+      </div>
+      <div class="col-6">
+        <p>Imagen del producto</p>
+        <q-uploader
+          style="max-width: 300px"
+          url="http://localhost:4444/upload"
+          text-color="dark"
+          label="Buscar ruta"
+          accept=".jpg,png, image/*"
+          color="white"
+          @rejected="onRejected"
+        />
+      </div>
     </div>
+    
+    
   </div>
 </template>
 
