@@ -1,20 +1,8 @@
 <template>
-  <div class="q-pa-md">
-    <div class="row q-col-gutter-none">
-      <div class="col-6 q-gutter-sm ">
-        <div class="q-gutter-sm" style="max-width: 350px">
-          <h3 class="text-capitalize">agregar productos</h3>
-          <p>Imagen del producto</p>
-          <q-uploader
-            style="max-width: 300px"
-            url="http://localhost:4444/upload"
-            text-color="dark"
-            label="Buscar ruta"
-            accept=".jpg,png, image/*"
-            color="white"
-            @rejected="onRejected"
-          />
-        </div>
+  <div class="q-pa-sm ">
+    <div class="row">
+      <div class="q-gutter-md col-6 header">
+        <div class="text-h3">Agregar productos</div>
         <q-input outlined v-model="text" label="Descripcion" />
 
         <q-input filled v-model="text" label="Precio/C" />
@@ -31,10 +19,27 @@
 
         <q-btn push color="primary" label="Enviar" />
       </div>
+      <div class="q-pl-md col-6 flex justify-center">
+        <div class="text-h6 justify-center">Imagen de Producto</div>
+        <q-uploader
+          style="max-width: 300px"
+          url="http://localhost:4444/upload"
+          text-color="dark"
+          label="Buscar ruta"
+          accept=".jpg,png, image/*"
+          color="white"
+          @rejected="onRejected"
+        />
+      </div>
     </div>
   </div>
 </template>
-
+<style scoped>
+.header {
+  position: relative;
+  top: 100px;
+}
+</style>
 <script>
 export default {
   data() {
