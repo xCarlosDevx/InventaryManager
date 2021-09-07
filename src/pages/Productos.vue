@@ -4,46 +4,32 @@
       <div class="col-6 q-gutter-sm ">
         <div class="q-gutter-sm" style="max-width: 350px">
           <h3 class="text-capitalize">agregar productos</h3>
-          <q-input outlined v-model="text" label="Descripcion" />
-
-          <q-input filled v-model="text" label="Precio/C" />
-
-          <q-input outlined v-model="text" label="Precio/V" />
-
-          <q-input filled v-model="text" label="Categoria" />
-
-          <q-input outlined v-model="text" label="Cantidad" />
-
-          <q-input filled v-model="text" label="Distribuidor" />
-
-          <q-btn push color="primary" label="Vaciar" />
-
-          <q-btn push color="primary" label="Enviar" />
+          <p>Imagen del producto</p>
+          <q-uploader
+            style="max-width: 300px"
+            url="http://localhost:4444/upload"
+            text-color="dark"
+            label="Buscar ruta"
+            accept=".jpg,png, image/*"
+            color="white"
+            @rejected="onRejected"
+          />
         </div>
-      </div>
-      <div class="col-6">
-        <p>Imagen del producto</p>
-        <q-uploader
-          style="max-width: 300px"
-          url="http://localhost:4444/upload"
-          text-color="dark"
-          label="Buscar ruta"
-          accept=".jpg,png, image/*"
-          color="white"
-          @rejected="onRejected"
-        />
-      </div>
-    </div>
-
-    <div class="flex q-col-gutter-none">
-
-      <div class="col-6  " style="align-items: start; background:blue">
-        <h3 class="text-capitalize">Principio</h3>
         <q-input outlined v-model="text" label="Descripcion" />
-      </div>
-      <div class="col-6 flex justify-end" style="background:red">
-      <h3 class="text-capitalize">Final</h3>
-      <q-input outlined v-model="text" label="Descripcion" />
+
+        <q-input filled v-model="text" label="Precio/C" />
+
+        <q-input outlined v-model="text" label="Precio/V" />
+
+        <q-input filled v-model="text" label="Categoria" />
+
+        <q-input outlined v-model="text" label="Cantidad" />
+
+        <q-input filled v-model="text" label="Distribuidor" />
+
+        <q-btn push color="primary" label="Vaciar" />
+
+        <q-btn push color="primary" label="Enviar" />
       </div>
     </div>
   </div>
