@@ -1,24 +1,24 @@
 <template>
   <div class="q-pa-md">
     <div class="row q-col-gutter-none">
-      <div class="col-6 q-gutter-sm" >
-      <div class="q-gutter-sm justify-end"  style="max-width: 350px">
-        <h3 class="text-capitalize">agregar productos</h3>
-        <q-input outlined v-model="text" label="Descripcion" />
+      <div class="col-6 q-gutter-sm ">
+        <div class="q-gutter-sm" style="max-width: 350px">
+          <h3 class="text-capitalize">agregar productos</h3>
+          <q-input outlined v-model="text" label="Descripcion" />
 
-        <q-input filled v-model="text" label="Precio/C" />
+          <q-input filled v-model="text" label="Precio/C" />
 
-        <q-input outlined v-model="text" label="Precio/V" />
+          <q-input outlined v-model="text" label="Precio/V" />
 
-        <q-input filled v-model="text" label="Categoria" />
+          <q-input filled v-model="text" label="Categoria" />
 
-        <q-input outlined v-model="text" label="Cantidad" />
+          <q-input outlined v-model="text" label="Cantidad" />
 
-        <q-input filled v-model="text" label="Distribuidor" />
+          <q-input filled v-model="text" label="Distribuidor" />
 
-        <q-btn push color="primary" label="Vaciar" />
+          <q-btn push color="primary" label="Vaciar" />
 
-        <q-btn push color="primary" label="Enviar" />
+          <q-btn push color="primary" label="Enviar" />
         </div>
       </div>
       <div class="col-6">
@@ -34,8 +34,18 @@
         />
       </div>
     </div>
-    
-    
+
+    <div class="flex q-col-gutter-none">
+
+      <div class="col-6  " style="align-items: start; background:blue">
+        <h3 class="text-capitalize">Principio</h3>
+        <q-input outlined v-model="text" label="Descripcion" />
+      </div>
+      <div class="col-6 flex justify-end" style="background:red">
+      <h3 class="text-capitalize">Final</h3>
+      <q-input outlined v-model="text" label="Descripcion" />
+      </div>
+    </div>
   </div>
 </template>
 
