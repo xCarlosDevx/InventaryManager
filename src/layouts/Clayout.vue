@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <q-layout view="hHh lpR fFf" class="shadow-2 rounded-borders">
-      <q-header elevated class="bg-cyan-8">
+      <q-header elevated >
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
           <q-toolbar-title>InventoryManager</q-toolbar-title>
@@ -86,3 +86,12 @@ export default {
   }
 };
 </script>
+<style scoped>
+.q-header{
+  background: #7FC8A9;
+}
+.q-toolbar >>> .q-btn, .q-toolbar__title.ellipsis{
+  color: #444941;
+}
+</style>
+
